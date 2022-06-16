@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function Product({ item }) {
   return (
-    <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center position-relative product-item my-3">
+    <div className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center position-relative product-item my-3">
       <div className="hover">
         <img className=" img-fluid" src={item.img} alt="" />
 
@@ -36,7 +36,7 @@ function Product({ item }) {
             <h5 className="text-black-50">{item.price}</h5>
 
             <Link to={`/product/${item._id}`}>
-              <h5 className="text-black-50"></h5>
+              <h5 className="text-black-50">view</h5>
             </Link>
           </div>
         </div>
