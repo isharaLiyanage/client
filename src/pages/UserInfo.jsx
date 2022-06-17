@@ -156,10 +156,7 @@ export default function UserInfo() {
           <div className="userShow">
             <div className="userShowTop">
               <img
-                src={
-                  user.img ||
-                  "https://crowd-literature.eu/wp-content/uploads/2015/01/no-avatar.gif"
-                }
+                src={user.img || ""}
                 alt={user.username}
                 className="userShowImg"
               />
@@ -270,14 +267,7 @@ export default function UserInfo() {
             </div>
             <div className=" mt-5 float-end">
               <div className="userUpdateUpload">
-                <img
-                  className="userUpdateImg"
-                  src={
-                    user.img ||
-                    "https://crowd-literature.eu/wp-content/uploads/2015/01/no-avatar.gif"
-                  }
-                  alt=""
-                />
+                <img className="userUpdateImg" src={user.img || ""} alt="" />
                 <label htmlFor="file">
                   <Publish className="userUpdateIcon" />
                 </label>
