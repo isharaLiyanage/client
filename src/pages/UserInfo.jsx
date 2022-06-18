@@ -37,7 +37,7 @@ export default function UserInfo() {
   const put_fullName = useRef();
   const put_email = useRef();
   const put_address = useRef();
-  const put_dateOfBirth = useRef();
+  // const put_dateOfBirth = useRef();
   const put_phone = useRef();
 
   const [file, setFile] = useState(null);
