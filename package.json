@@ -31,7 +31,7 @@
   },
   "scripts": {
     "predeploy":"npm run build",
-    "depoly":  "gh-pages -d build",
+    "depoly":  "gh-pages -d public",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
