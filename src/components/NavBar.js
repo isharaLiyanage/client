@@ -31,10 +31,10 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href={"./"}>Home</Nav.Link>
-              <Nav.Link href={"./products/all"}>Products</Nav.Link>
+              <Nav.Link href={"/client/"}>Home</Nav.Link>
+              <Nav.Link href={"/client/products/all"}>Products</Nav.Link>
 
-              <Nav.Link href={"./aboutUs"}>About Us</Nav.Link>
+              <Nav.Link href={"/client/aboutUs"}>About Us</Nav.Link>
             </Nav>
             <Link
               to="/cart"
@@ -51,9 +51,9 @@ function NavBar() {
               </div>
             </Link>
             {userName == null ? (
-              <Link to="/login">Login</Link>
+              <Link to="/client/login">Login</Link>
             ) : (
-              <Nav.Link href={"./info/" + userID}>{userName}</Nav.Link>
+              <Nav.Link href={"/client/info/" + userID}>{userName}</Nav.Link>
             )}{" "}
             {/* {userName ? <Link>sdsdsd</Link> : <Link to="/login">Login</Link>} */}
             <Form className="d-flex">
