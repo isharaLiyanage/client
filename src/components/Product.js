@@ -20,7 +20,7 @@ function Product({ item }) {
               <FontAwesomeIcon icon={faCartShopping} />
             </div>
             <div className="m-1">
-              <Link to={`/client/product/${item._id}`}>
+              <Link to={`/product/${item._id}`}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </Link>
             </div>
@@ -35,7 +35,7 @@ function Product({ item }) {
             <h5 className=" text-black-50">{item.disc}</h5>
             <h5 className="text-black-50">{item.price}</h5>
 
-            <Link to={`/client/product/${item._id}`}>
+            <Link to={`/product/${item._id}`}>
               <h5 className="text-black-50">view</h5>
             </Link>
           </div>
