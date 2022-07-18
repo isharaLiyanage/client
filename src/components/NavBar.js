@@ -9,21 +9,29 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { logOut } from "../redux/apiCalls";
+
 function NavBar() {
   const logUser = useSelector((state) => state.user.currentUser);
   const quantity = useSelector((state) => state.cart.quantity);
   console.log(quantity);
 
-  const userName = logUser ? `${logUser.username}` : "new";
-  const userID = logUser ? `${logUser._id}` : "new";
+  const userName = logUser ? `${logUser.username}` : "";
+  const userID = logUser ? `${logUser._id}` : "";
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(logOut);
+  };
 
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar className="bgColor " expand="lg">
         <Container fluid>
-          <Navbar.Brand>Navbar scroll</Navbar.Brand>
+          <Navbar.Brand>Shopping</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -50,10 +58,11 @@ function NavBar() {
                 </p>
               </div>
             </Link>
-            {userName == null ? (
-              <Link to="/login">Login</Link>
+            {userName === "" ? (
+              <Nav.Link href="/login">Login</Nav.Link>
             ) : (
-              <Nav.Link href={"/info/" + userID}>{userName}</Nav.Link>
+              ((<Nav.Link href={"/info/" + userID}>{userName} </Nav.Link>),
+              (<Nav.Link onClick={handleClick}> Logout</Nav.Link>))
             )}{" "}
             {/* {userName ? <Link>sdsdsd</Link> : <Link to="/login">Login</Link>} */}
             <Form className="d-flex">

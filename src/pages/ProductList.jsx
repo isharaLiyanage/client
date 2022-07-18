@@ -26,8 +26,8 @@ function ProductList() {
     <div>
       <NavBar />
       <h3 className="h1">{cat}</h3>
-      <Row className="row mt-5  justify-content-between align-items-center">
-        <Col className=" d-flex col-4">
+      <Row className="row mt-5  justify-space-around align-items-center">
+        <Col className=" d-flex col-12 col-sm-6">
           <h6 className="">Filter Products:</h6>
           <select
             onChange={handelFilter}
@@ -51,7 +51,7 @@ function ProductList() {
           </select>
         </Col>
 
-        <Col className=" d-flex  col-3">
+        <Col className=" d-flex  col-12 col-sm-6">
           <h6> Sort Products:</h6>
           <select
             onChange={(e) => setSort(e.target.value)}

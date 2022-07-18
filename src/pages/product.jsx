@@ -50,12 +50,14 @@ function Product() {
   return (
     <div>
       <NavBar />
-      <Row className=" align-items-center mt-5">
+      <Row className=" align-items-center  mt-sm-5">
         <Col className="col-12 col-md-5 col-sm-5">
-          <img src={product.img} alt="" className=" img-fluid" />
+          <div className=" bgColor bgRadius">
+            <img src={product.img} alt="" className=" img-fluid" />
+          </div>
         </Col>
         <Col>
-          <h2 className="h2">Name and {product.title} </h2>
+          <h2 className="h2 mt-3">{product.title} </h2>
           <p>{product.desc}</p>
           <p className="h3">$ {product.price}</p>
           <div className="filter">

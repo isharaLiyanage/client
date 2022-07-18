@@ -6,6 +6,7 @@ import {
   updateUserStart,
   updateUserSuccess,
   updateUserFailure,
+  logout,
 } from "./userRedux";
 
 export const login = async (dispatch, user) => {
@@ -29,4 +30,7 @@ export const updateUser = async (userId, user, dispatch) => {
   } catch (err) {
     dispatch(updateUserFailure());
   }
+};
+export const logOut = async (dispatch) => {
+  dispatch(logout());
 };

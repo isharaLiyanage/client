@@ -40,7 +40,7 @@ function Login() {
                 aria-label="user "
                 onChange={(e) => setUsername(e.target.value)}
               ></FormControl>
-              <label for="floatingInput">User Name</label>
+              <label htmlFor="floatingInput">User Name</label>
             </Form.Floating>
             <Form.Floating>
               <FormControl
@@ -51,7 +51,7 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               ></FormControl>
 
-              <label for="floatingPassword">Password</label>
+              <label htmlFor="floatingPassword">Password</label>
             </Form.Floating>
             <ButtonSubmit
               onClick={handleClick}

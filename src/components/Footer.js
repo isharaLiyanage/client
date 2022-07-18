@@ -1,15 +1,15 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Nav } from "react-bootstrap";
 
 function Footer() {
   return (
-    <footer className=" position-relative ">
+    <footer className=" footer  bg-dark bg-opacity-10 ">
       <div>
         <Container>
-          <Row className=" bg-light">
+          <Row className="">
             <Col className="col-12 col-md-4 mt-2">
-              <h3 className="h3">Company Name</h3>
-              <p>
+              <h3 className="h5">Shopping Company</h3>
+              <p className="p text-black-50 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
                 pariatur porro, nostrum dicta a sed exercitationem iusto
                 sapiente voluptas expedita?
@@ -17,18 +17,24 @@ function Footer() {
             </Col>
             <Col className="col-6 col-sm-4 mt-2">
               <h3 className="h4">Quick Link</h3>
-              <ul>
-                <li>Products</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
+              <ul className=" nav d-block">
+                <li>
+                  <Nav.Link href={"/products/all"}>Products</Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link href={"/aboutUs"}>About Us</Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link href={"/products/all"}>Contact Us</Nav.Link>
+                </li>
               </ul>
             </Col>
             <Col className="col-6 col-sm-4 mt-2">
               <h3 className="h3">FOLLOW US ON</h3>
               <ul>
-                <li>Products</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
               </ul>
             </Col>
           </Row>

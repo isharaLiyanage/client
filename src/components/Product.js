@@ -31,13 +31,12 @@ function Product({ item }) {
         </div>
         <div className=" card-body">
           <div className=" h5  position-relative">
-            <div className="title pt-4 pb-1"> {item.title} </div>
-            <h5 className=" text-black-50">{item.disc}</h5>
-            <h5 className="text-black-50">{item.price}</h5>
+            <div key={item._id} className="title pt-4 pb-1">
+              {" "}
+              {item.title}{" "}
+            </div>
 
-            <Link to={`/product/${item._id}`}>
-              <h5 className="text-black-50">view</h5>
-            </Link>
+            <h5 className="text-black-50">{item.price}</h5>
           </div>
         </div>
       </div>

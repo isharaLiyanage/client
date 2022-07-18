@@ -26,11 +26,11 @@ function App() {
             <Route path="/info/:id" element={<UserInfo />} />
 
             <Route
-              path="/Login"
+              path="/login"
               element={user ? <Navigate replace to="/client" /> : <Login />}
             />
             <Route
-              path="/SignIn"
+              path="/signIn"
               element={user ? <Navigate replace to="/client" /> : <SignIn />}
             />
           </Routes>
