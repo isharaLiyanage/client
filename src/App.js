@@ -20,17 +20,17 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/client" element={<Home />}></Route>
-            <Route path="/products/:category" element={<ProductList />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/info/:id" element={<UserInfo />} />
+            <Route path="./products/:category" element={<ProductList />} />
+            <Route path="./product/:id" element={<Product />} />
+            <Route path="./cart" element={<Cart />} />
+            <Route path="./info/:id" element={<UserInfo />} />
 
             <Route
-              path="/login"
+              path="./login"
               element={user ? <Navigate replace to="/client" /> : <Login />}
             />
             <Route
-              path="/signIn"
+              path="./signIn"
               element={user ? <Navigate replace to="/client" /> : <SignIn />}
             />
           </Routes>
