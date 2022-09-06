@@ -27,7 +27,7 @@ function App() {
             <Route path="/info/:id" element={<UserInfo />} />
 
             <Route
-              path="./login"
+              path="/login"
               element={user ? <Navigate replace to="/client" /> : <Login />}
             />
             <Route
