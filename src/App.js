@@ -25,6 +25,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/client" element={<Navigate to="/" replace />}></Route>
             <Route path="/products/:category" element={<ProductList />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
