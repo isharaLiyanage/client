@@ -1,6 +1,11 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  HashRouter as Router,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/product";
@@ -17,16 +22,16 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <BrowserRouter>
+        <Router>
           <Routes>
-            <Route path="/client" element={<Home />}></Route>
-            <Route exact path="/products/:category" element={<ProductList />} />
-            <Route exact path="/product/:id" element={<Product />} />
-            <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/info/:id" element={<UserInfo />} />
+            <Route path="/client/" element={<Home />}></Route>
+            <Route path="/products/:category" element={<ProductList />} />
+            <Route path="/product/:id" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/info/:id" element={<UserInfo />} />
 
             <Route
-              path="/login"
+              path="./login"
               element={user ? <Navigate replace to="/client" /> : <Login />}
             />
             <Route
@@ -34,7 +39,7 @@ function App() {
               element={user ? <Navigate replace to="/client" /> : <SignIn />}
             />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </Container>
     </div>
   );
