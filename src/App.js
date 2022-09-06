@@ -16,9 +16,9 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 function App() {
-  const user = useSelector((state) => state.user?.currentUser);
+  // const user = useSelector((state) => state.user?.currentUser);
   return (
     <div className="App">
       <Container>
