@@ -1,18 +1,18 @@
 import "./App.css";
 import React from "react";
-import {
-  Routes,
-  Route,
-  Navigate,
-  BrowserRouter as Router,
-} from "react-router-dom";
-import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
-import Product from "./pages/product";
-import Cart from "./pages/Cart";
-import Login from "./pages/Login";
-import SignIn from "./pages/SignIn";
-import UserInfo from "./pages/UserInfo";
+// import {
+//   Routes,
+//   Route,
+//   Navigate,
+//   BrowserRouter as Router,
+// } from "react-router-dom";
+// import Home from "./pages/Home";
+// import ProductList from "./pages/ProductList";
+// import Product from "./pages/product";
+// import Cart from "./pages/Cart";
+// import Login from "./pages/Login";
+// import SignIn from "./pages/SignIn";
+// import UserInfo from "./pages/UserInfo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Router>
+        {/* <Router>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/client" element={<Navigate to="/" replace />}></Route>
@@ -40,7 +40,7 @@ function App() {
               element={user ? <Navigate replace to="/client" /> : <SignIn />}
             />
           </Routes>
-        </Router>
+        </Router> */}
       </Container>
     </div>
   );
