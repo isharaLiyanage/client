@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
-  HashRouter as Router,
+  BrowserRouter as Router,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
@@ -24,7 +24,7 @@ function App() {
       <Container>
         <Router>
           <Routes>
-            <Route path="/client/" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/products/:category" element={<ProductList />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
