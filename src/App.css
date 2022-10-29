@@ -6,6 +6,14 @@
   background-color: rgba(248,249,250);
 
 }
+.slider-text{
+  font-size: 45px;
+  font-weight: 600;
+  color: white;
+}
+.slider-text span{
+  color: red;
+}
 .itemCenter{
     position: absolute;
     left: 0;

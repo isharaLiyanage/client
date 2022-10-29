@@ -1,8 +1,38 @@
-import React from "react";
-
-import { Container, Form, FormControl, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Container,
+  Form,
+  FormControl,
+  Button,
+  Row,
+  Col,
+  Alert,
+} from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { Router } from "react-router-dom";
+import { sign } from "../redux/apiCalls";
 
 function SignIn() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const success = useSelector((state) => state.user.currentSign?.username);
+  const { isFetching, errors } = useSelector((state) => state.user);
+
+  const user = useSelector((state) => state.user.currentUser);
+  if (user) {
+    Router.push("./");
+  }
+  if (success) {
+    Router.push("./");
+  }
+  const handleClick = (e) => {
+    e.preventDefault();
+    sign(dispatch, { username, email, password });
+  };
+
   return (
     <div className="">
       <Container className=" position-relative">
@@ -17,6 +47,7 @@ function SignIn() {
                 placeholder="Your Name... "
                 className="me-2"
                 aria-label="Name"
+                onChange={(e) => setUsername(e.target.value)}
               ></FormControl>
               <label for="floatingInput">Name</label>
             </Form.Floating>
@@ -26,6 +57,7 @@ function SignIn() {
                 placeholder="Email address..."
                 className="me-2 mt-1"
                 aria-label="Email"
+                onChange={(e) => setEmail(e.target.value)}
               ></FormControl>
               <label for="floatingInput">Email </label>
             </Form.Floating>
@@ -35,18 +67,31 @@ function SignIn() {
                 placeholder="Your Email..."
                 className="me-2 mt-1"
                 aria-label="Password"
+                onChange={(e) => setPassword(e.target.value)}
               ></FormControl>
 
               <label for="floatingPassword">Password</label>
             </Form.Floating>
-            <Button type="submit" className=" btn-lg  w-100 btn-primary mt-3">
+            <Button
+              disabled={isFetching}
+              onClick={handleClick}
+              className=" btn-lg  w-100 btn-primary mt-3"
+            >
               Sign in
             </Button>
+            <Row>
+              <Col>
+                {errors && (
+                  <Alert variant="danger" className="mt-3">
+                    Something Wrong...
+                  </Alert>
+                )}
+              </Col>
+            </Row>
           </Form>
         </div>
       </div>
     </div>
   );
 }
-
 export default SignIn;

@@ -15,7 +15,10 @@ function Slider() {
             </Col>
 
             <Col className="m-auto p-4">
-              <h3 className=" text-danger h1">15% OFFER</h3>
+              <h3 className="  slider-text">
+                {" "}
+                <span>15%</span> OFFER
+              </h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Col>
           </Row>
@@ -24,7 +27,10 @@ function Slider() {
         <Carousel.Item interval={500}>
           <Row style={{ backgroundColor: "rgb(200, 200, 200)" }}>
             <Col className="m-auto p-4">
-              <h3 className=" text-danger h1">20% OFFER</h3>
+              <h3 className="  slider-text">
+                {" "}
+                <span>50%</span> OFFER
+              </h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Col>
             <Col>
@@ -43,10 +49,11 @@ function Slider() {
               />{" "}
             </Col>
             <Col className="m-auto p-4">
-              <h3 className=" text-danger h1">5% OFFER</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>{" "}
+              <h3 className="  slider-text">
+                {" "}
+                <span>5%</span> OFFER
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>{" "}
             </Col>
           </Row>
         </Carousel.Item>

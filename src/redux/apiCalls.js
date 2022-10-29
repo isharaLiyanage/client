@@ -7,7 +7,20 @@ import {
   updateUserSuccess,
   updateUserFailure,
   logout,
+  SignStart,
+  SignSuccess,
+  SignFailure,
 } from "./userRedux";
+
+export const sign = async (dispatch, user) => {
+  dispatch(SignStart());
+  try {
+    const res = await publicRequest.post("/auth/register", user);
+    dispatch(SignSuccess(res.data));
+  } catch (err) {
+    dispatch(SignFailure());
+  }
+};
 
 export const login = async (dispatch, user) => {
   dispatch(loginStart());
@@ -31,6 +44,7 @@ export const updateUser = async (userId, user, dispatch) => {
     dispatch(updateUserFailure());
   }
 };
+
 export const logOut = async (dispatch) => {
   dispatch(logout());
 };
