@@ -37,11 +37,11 @@ function Products({ cat, filters, sort }) {
   }, [cat, filters, products]);
 
   // for sort products (price)
-  console.log(sort);
+
   useEffect(() => {
     if (sort === "newest") {
       setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+        [...prev].sort((a, b) => b.createdAt.localeCompare(a.createdAt))
       );
     } else if (sort === "asc") {
       setFilteredProducts((prev) =>

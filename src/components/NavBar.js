@@ -61,7 +61,7 @@ function NavBar() {
             {userName === "" ? (
               <div className="d-flex">
                 <Nav.Link href="/login">Login</Nav.Link>
-                <Nav.Link href="/sign">Sign</Nav.Link>
+                <Nav.Link href="/signIn">Sign</Nav.Link>
               </div>
             ) : (
               ((<Nav.Link href={"/info/" + userID}>{userName} </Nav.Link>),

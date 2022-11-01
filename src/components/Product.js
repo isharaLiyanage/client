@@ -12,7 +12,7 @@ function Product({ item }) {
   return (
     <div className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center position-relative product-item my-3">
       <div className="hover">
-        <img className=" img-fluid" src={item.img} alt="" />
+        <img className=" product-img" src={item.img} alt="" />
 
         <div className=" itemCenter">
           <div className="alignItemHover">
@@ -36,7 +36,7 @@ function Product({ item }) {
               {item.title}{" "}
             </div>
 
-            <h5 className="text-black-50">{item.price}</h5>
+            <h5 className="text-black-50">$ {item.price}</h5>
           </div>
         </div>
       </div>

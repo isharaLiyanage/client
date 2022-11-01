@@ -25,7 +25,7 @@ const userSlice = createSlice({
     },
     updateUserSuccess: (state, action) => {
       state.isFetching = false;
-      console.log(action.payload);
+
       state.currentUser = action.payload;
     },
     updateUserFailure: (state) => {
@@ -37,7 +37,7 @@ const userSlice = createSlice({
     },
     SignSuccess: (state, action) => {
       state.isFetching = false;
-      state.currentSign = action.payload;
+      state.currentUser = action.payload;
     },
     SignFailure: (state) => {
       state.isFetching = false;

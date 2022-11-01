@@ -58,6 +58,7 @@ function ProductList() {
             name="sort"
             id="sort"
             aria-required
+            defaultValue={"newest"}
             className="mx-2"
           >
             <option value="newest">Newest</option>

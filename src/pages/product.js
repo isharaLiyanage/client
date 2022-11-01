@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Col, Row } from "react-bootstrap";
-
 import { publicRequest } from "../requestMothed";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
@@ -33,6 +32,7 @@ function Product() {
       setQuantity(quantity + 1);
     }
   };
+
   const handleClick = () => {
     dispatch(addProduct({ ...product, quantity, color, size }));
   };
@@ -81,7 +81,7 @@ function Product() {
                 <div className="d d-flex">
                   <SizeSelect onChange={(e) => setSize(e.target.value)}>
                     {product.size?.map((s) => (
-                      <Size key={s} className="mx-1">
+                      <Size key={s} value={s} className="mx-1">
                         {s}
                       </Size>
                     ))}
