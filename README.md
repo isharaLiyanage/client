@@ -10,6 +10,16 @@ https://client-delta-three.vercel.app/
 - API
 
 https://github.com/isharaLiyanage/REST-API
+
+## Features
+
+- User login or Register form.
+- Product page (Product details)
+- Filter products dependent on price, color, size, or the newest
+- Add cart and see the cart.
+
+
+
 ## Error
 
 some times API not working (CORS error, because it uses free hosting)
@@ -91,13 +101,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-## Features
-
-- User login or Register form.
-- Product page (Product details)
-- Filter products dependent on price, color, size, or the newest
-- Add cart and see the cart.
-
 
