@@ -24,14 +24,22 @@ https://github.com/isharaLiyanage/REST-API
 
 some times API not working (CORS error, because it uses free hosting)
 
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## clone
 
-In the project directory, you can run:
+```bash
+  https://github.com/isharaLiyanage/client.git
+```
 
 ### `npm start`
 
