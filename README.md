@@ -1,3 +1,26 @@
+
+# React.js e-commerce  project
+
+A complete e-commerce with own API website for my personal project list
+
+## Demo
+
+https://client-delta-three.vercel.app/
+
+- API
+
+https://github.com/isharaLiyanage/REST-API
+## Error
+
+some times API not working (CORS error, because it uses free hosting)
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +91,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Features
+
+- User login or Register form.
+- Product page (Product details)
+- Filter products dependent on price, color, size, or the newest
+- Add cart and see the cart.
+
+
