@@ -24,12 +24,6 @@ https://github.com/isharaLiyanage/REST-API
 
 some times API not working (CORS error, because it uses free hosting)
 
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
 
 # Getting Started with Create React App
 
