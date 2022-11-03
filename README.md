@@ -31,7 +31,7 @@ some times API not working (CORS error, because it uses free hosting)
 - Add more integrations
 
 
-# Getting Started with Create React App
+# Getting Started 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,6 +39,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```bash
   https://github.com/isharaLiyanage/client.git
+  npm install
 ```
 
 ### `npm start`
