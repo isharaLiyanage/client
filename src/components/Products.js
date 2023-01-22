@@ -13,8 +13,8 @@ function Products({ cat, filters, sort }) {
       try {
         const res = await axios.get(
           cat
-            ? `https://newapi2022.herokuapp.com/api/products?category=${cat}`
-            : "https://newapi2022.herokuapp.com/api/products"
+            ? `https://gorgeous-turtleneck-bat.cyclic.app/api/products?category=${cat}`
+            : "https://gorgeous-turtleneck-bat.cyclic.app/api/products"
         );
         setProducts(res.data);
       } catch (err) {

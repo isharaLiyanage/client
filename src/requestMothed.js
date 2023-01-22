@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://newapi2022.herokuapp.com/api/";
+const BASE_URL = "https://gorgeous-turtleneck-bat.cyclic.app/api/";
 let TOKEN;
 if (JSON.parse(localStorage.getItem("persist:root"))) {
   TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user)
